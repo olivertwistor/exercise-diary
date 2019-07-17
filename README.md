@@ -16,7 +16,7 @@ If you want to keep track of your exercise, and love statistics, this applicatio
 ## Prerequisites
 To run this application you will need the following:
 
-* [PHP 7.2 or newer][6]
+* [PHP 5.3.7 or newer][6]
 * a web server capable of running PHP, for example [Apache][1] or [IIS][4]
 * a database driver such as *mysqli*, *postgre* and *sqlite3* (please refer to [CodeIgniter's server requirements][5] for information which database drivers are specifically supported)
 

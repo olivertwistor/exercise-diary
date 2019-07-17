@@ -22,7 +22,7 @@
         "source": "https://github.com/olivertwistor/exercise-diary"
     },
     "require": {
-        "php": "^7.2"
+        "php": ">=5.3.7"
     },
     "config": {
         "vendor-dir": "application/vendor/"
