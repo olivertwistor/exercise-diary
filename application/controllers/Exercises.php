@@ -1,6 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/**
+ * This class controls the CRUD operations of exercises as well as serves
+ * different views.
+ *
+ * @author Johan Nilsson
+ * @since 0.1.0
+ */
 class Exercises extends MY_Controller
 {
     public function __construct()
