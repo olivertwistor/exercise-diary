@@ -1,2 +1,4 @@
+.idea/
 application/config/development/
 application/logs/log-*.php
+application/vendor/

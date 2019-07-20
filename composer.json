@@ -1,5 +1,5 @@
 {
-    "name": "olivertwistor/exercisediary",
+    "name": "olivertwistor/exercise-diary",
     "description": "Helps journaling your exercise and gather statistics about it.",
     "version": "0.1.0",
     "type": "project",
@@ -22,7 +22,7 @@
         "source": "https://github.com/olivertwistor/exercise-diary"
     },
     "require": {
-        "php": "^7.2"
+        "php": ">=7.1"
     },
     "config": {
         "vendor-dir": "application/vendor/"
