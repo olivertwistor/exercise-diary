@@ -29,9 +29,9 @@ class MY_Controller extends CI_Controller
      *
      * @since 0.1.0
      */
-    public function render_view(string $main, $data = [],
-                                string $header = 'header',
-                                string $footer = 'footer')
+    protected function render_view(string $main, $data = [],
+                                   string $header = 'header',
+                                   string $footer = 'footer')
     {
         $this->load->view($header, $data);
         $this->load->view($main, $data);

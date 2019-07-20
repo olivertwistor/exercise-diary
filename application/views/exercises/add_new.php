@@ -27,10 +27,14 @@
         echo form_fieldset_close();
         echo form_fieldset('Information about the exercise itself');
             echo form_label('Exercise type', 'exercise-type');
+            if (!isset($exercise_types) || !is_array($exercise_types))
+            {
+                $exercise_types = [];
+            }
             echo form_dropdown('exercise-type', $exercise_types);
             echo form_label(
                 'Number of repetitions, minutes or whichever unit is ' .
-                'appropiate for the exercise type',
+                'appropriate for the exercise type',
                 'repetitions',
                 ['class' => 'required']
             );
