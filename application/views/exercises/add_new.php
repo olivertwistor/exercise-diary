@@ -2,15 +2,13 @@
 
 <main>
     <h1>Add a new exercise</h1>
+    <?php if (!empty($insert_status)) : ?>
+    <p class="<?php echo $insert_status['css_class']; ?>">
+        <?php echo $insert_status['text']; ?>
+    </p>
+    <?php endif; ?>
     <?php
-    if (isset($insert_success))
-    {
-        echo '<p class="' . $insert_success['class'] . '">' .
-            $insert_success['text'] . '</p>';
-    }
-    ?>
-    <?php
-    echo form_open('exercises/db_insert');
+    echo form_open('exercises/add');
         echo form_fieldset('Date and time for the exercise');
             echo form_label('Date', 'exercise-date', ['class' => 'required']);
             echo form_input([

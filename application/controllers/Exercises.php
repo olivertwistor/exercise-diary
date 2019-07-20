@@ -21,13 +21,34 @@ class Exercises extends MY_Controller
 
     public function add() : void
     {
+        $insert_status = [];
+
+        if (!is_null($this->input->post('save')))
+        {
+            $success = $this->db_insert();
+            if ($success)
+            {
+                $insert_status['css_class'] = 'success';
+                $insert_status['text'] = 'Successfully added the exercise.';
+            }
+            else
+            {
+                $insert_status = [
+                    'css_class' => 'failure',
+                    'text' => 'Failed to add the exercise.'
+                ];
+            }
+
+        }
+
         $this->render_view('exercises/add_new', [
-                'exercise_types' => $this->exercise_type->read_all()
+                'exercise_types' => $this->exercise_type->read_all(),
+                'insert_status' => $insert_status
             ]
         );
     }
 
-    public function db_insert() : void
+    private function db_insert() : bool
     {
         $success = $this->exercise->insert(
             $this->input->post('exercise-date'),
@@ -36,21 +57,6 @@ class Exercises extends MY_Controller
             $this->input->post('repetitions')
         );
 
-        $insert_result = [];
-        if ($success)
-        {
-            $insert_result['class'] = 'success';
-            $insert_result['text'] = 'Exercise added to the database.';
-        }
-        else
-        {
-            $insert_result['class'] = 'failure';
-            $insert_result['text'] = 'Failed to add exercise to the database.';
-        }
-
-        $this->render_view('exercises/add_new', [
-            'exercise_types' => $this->exercise_type->read_all(),
-            'insert_result' => $insert_result]
-        );
+        return $success;
     }
 }
