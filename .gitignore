@@ -2,10 +2,7 @@
 .idea/
 app/build/
 app/proguard-rules.pro
-_old/application/config/development/
-_old/application/logs/log-*.php
-_old/application/vendor/
 gradle/wrapper
 *.iml
+*.properties
 gradlew*
-local.properties

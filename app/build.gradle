@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 15
     buildToolsVersion "29.0.1"
     defaultConfig {
         applicationId "nu.olivertwistor.exercisediary"
@@ -16,6 +16,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        sourceCompatibility = '1.6'
+        targetCompatibility = '1.6'
     }
 }
 

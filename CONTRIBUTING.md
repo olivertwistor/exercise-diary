@@ -71,4 +71,6 @@ https://akrabat.com/the-beginners-guide-to-contributing-to-a-github-project/
 
 
 [1]: mailto:oliver_twistor@hotmail.com
+[2]: https://github.com/olivertwistor/exercise-diary/issues/new
+[3]: https://github.com/olivertwistor/exercise-diary/issues
 [4]: #how-to-make-changes-to-the-project
