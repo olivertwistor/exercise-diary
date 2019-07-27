@@ -49,7 +49,7 @@ application.
 #### How to create a new issue
 
 1. Go to the [new issue][2] page.
-1. Write a short and succint *title*.
+1. Write a short and succinct *title*.
 1. Provide more details in the *comment* field if the title isn't enough.
 1. If you don't have repository access, skip to the next step.
     1. Select an *assignee* that should handle the issue. If you're not 
