@@ -9,6 +9,7 @@ class Exercise_type extends CI_Model
 
         $this->load->database();
     }
+
     public function read_all() : array
     {
         // Mockup!

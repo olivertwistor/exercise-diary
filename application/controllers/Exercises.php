@@ -15,8 +15,31 @@ class Exercises extends MY_Controller
         parent::__construct();
 
         $this->load->helper('form');
+        $this->load->helper('url');
+
         $this->load->model('exercise');
         $this->load->model('exercise_type');
+    }
+
+    public function index() : void
+    {
+        $this->list();
+    }
+
+    public function list() : void
+    {
+        $exercises = $this->exercise->read_all('exercise');
+
+        if (empty($exercises))
+        {
+            $this->render_view('exercises/empty_list');
+        }
+        else
+        {
+            $this->render_view('exercises/list', [
+                'exercises' => $exercises
+            ]);
+        }
     }
 
     public function add() : void
@@ -25,7 +48,14 @@ class Exercises extends MY_Controller
 
         if (!is_null($this->input->post('save')))
         {
-            $success = $this->db_insert();
+            // Store the POST data in an exercise object. The date and the
+            // time must be concatenated into a timestamp first, though.
+            $exercise_data = $this->input->post();
+            $exercise_data['timestamp'] = $exercise_data['exercise_date'] .
+                ' ' . $exercise_data['exercise_time'];
+            $this->exercise->fill($exercise_data);
+
+            $success = $this->exercise->create('exercise');
             if ($success)
             {
                 $insert_status['css_class'] = 'success';
@@ -38,25 +68,13 @@ class Exercises extends MY_Controller
                     'text' => 'Failed to add the exercise.'
                 ];
             }
-
         }
 
+        $exercise_types = $this->exercise_type->read_all();
+
         $this->render_view('exercises/add_new', [
-                'exercise_types' => $this->exercise_type->read_all(),
-                'insert_status' => $insert_status
-            ]
-        );
-    }
-
-    private function db_insert() : bool
-    {
-        $success = $this->exercise->insert(
-            $this->input->post('exercise-date'),
-            $this->input->post('exercise-time'),
-            $this->input->post('exercise-type'),
-            $this->input->post('repetitions')
-        );
-
-        return $success;
+            'exercise_types' => $exercise_types,
+            'insert_status' => $insert_status
+        ]);
     }
 }

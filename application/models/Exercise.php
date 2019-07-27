@@ -1,50 +1,42 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Exercise extends CI_Model
+/**
+ * This is a representation of an exercise instance. It maps to the
+ * corresponding database table.
+ *
+ * @author Johan Nilsson
+ * @since 0.1.0
+ */
+class Exercise extends MY_Model
 {
-    public function __construct()
-    {
-        parent::__construct();
+    /**
+     * Timestamp for this exercise instance, in the form of a MySQL timestamp
+     * string.
+     *
+     * @var string
+     *
+     * @since 0.1.0
+     */
+    private $exercise_timestamp;
 
-        $this->load->database();
-    }
+    /**
+     * Type of exercise. An integer that maps to the row ID of the Exercise_type
+     * class.
+     *
+     * @var int
+     *
+     * @since 0.1.0
+     */
+    private $exercise_type;
 
-    public function insert(string $date,
-                           string $time,
-                           int $type,
-                           int $repetitions) : bool
-    {
-        if (is_null($date) || is_null($time) || is_null($type) ||
-                is_null($repetitions))
-        {
-            return false;
-        }
-
-        // Concatenate the date and the time to a timestamp string.
-        $timestamp = $date . ' ' . $time;
-
-        $insert_data = [
-            'exercise_timestamp' => $timestamp,
-            'exercise_type' => $type,
-            'repetitions' => $repetitions
-        ];
-
-        $success = $this->db->insert('exercise', $insert_data);
-        if ($success)
-        {
-            log_message('info',
-                'Successfully inserted exercise in the database.'
-            );
-        }
-        else
-        {
-            log_message('error',
-                'Failed to insert exercise in the database. ' .
-                var_export($this->db->error(), true)
-            );
-        }
-
-        return $success;
-    }
+    /**
+     * Number of repetitions, minutes or whichever unit is appropriate for the
+     * exercise type.
+     *
+     * @var int
+     *
+     * @since 0.1.0
+     */
+    private $repetitions;
 }
