@@ -8,4 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="main_menu_button">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/button_text</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:padding">24dp</item>
+    </style>
+
 </resources>
