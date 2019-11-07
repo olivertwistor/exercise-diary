@@ -4,26 +4,28 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <Button
-        android:id="@+id/btn_add_exercise"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/tv_exercise_type_name"
+        android:layout_width="0dip"
+        app:layout_constraintHorizontal_weight="1"
         android:layout_height="wrap_content"
-        android:text="@string/add_exercise"
-        style="@style/main_menu_button"
+        android:text="@string/exercise_type_name"
+        style="@style/form_label"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/btn_add_exercise_type"/>
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
-    <Button
-        android:id="@+id/btn_add_exercise_type"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/et_exercise_type_name"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        android:layout_width="0dip"
+        app:layout_constraintHorizontal_weight="2"
         android:layout_height="wrap_content"
-        android:text="@string/add_exercise_type"
-        style="@style/main_menu_button"
-        app:layout_constraintTop_toBottomOf="@id/btn_add_exercise"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/tv_exercise_type_name"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

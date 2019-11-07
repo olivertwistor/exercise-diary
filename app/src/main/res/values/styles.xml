@@ -15,4 +15,10 @@
         <item name="android:padding">24dp</item>
     </style>
 
+    <style name="form_label">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/form_text</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
 </resources>

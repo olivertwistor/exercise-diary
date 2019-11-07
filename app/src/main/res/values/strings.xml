@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Exercise Diary</string>
     <string name="add_exercise">Add exercise</string>
+    <string name="add_exercise_type">Add exercise type</string>
+
+    <string name="exercise_type_name">Exercise type</string>
 </resources>

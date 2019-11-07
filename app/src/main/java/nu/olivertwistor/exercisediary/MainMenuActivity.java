@@ -1,5 +1,6 @@
 package nu.olivertwistor.exercisediary;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -30,6 +31,13 @@ public class MainMenuActivity extends AppCompatActivity
      * @since 0.1.0
      */
     private Button addExerciseButton;
+
+    /**
+     * Button that leads to the Add exercise type activity.
+     *
+     * @since 0.1.0
+     */
+    private Button addExerciseTypeButton;
 
     /**
      * Sets content view and adds click listeners to all the buttons.
@@ -64,6 +72,12 @@ public class MainMenuActivity extends AppCompatActivity
         {
             Log.e(logtag, "Not yet implemented.");
         }
+        else if (clickedButton == this.addExerciseTypeButton)
+        {
+            final Intent intent = new Intent(
+                    this, AddExerciseTypeActivity.class);
+            this.startActivity(intent);
+        }
     }
 
     /**
@@ -77,5 +91,9 @@ public class MainMenuActivity extends AppCompatActivity
     {
         this.addExerciseButton = this.findViewById(R.id.btn_add_exercise);
         this.addExerciseButton.setOnClickListener(listener);
+
+        this.addExerciseTypeButton = this.findViewById(
+                R.id.btn_add_exercise_type);
+        this.addExerciseTypeButton.setOnClickListener(listener);
     }
 }
