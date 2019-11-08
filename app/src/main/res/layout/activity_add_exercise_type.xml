@@ -1,31 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tv_exercise_type_name"
-        android:layout_width="0dip"
-        app:layout_constraintHorizontal_weight="1"
+        android:id="@+id/label_add_exercise_type_name"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_bias="0.4"
         android:layout_height="wrap_content"
-        android:text="@string/exercise_type_name"
-        style="@style/form_label"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintRight_toLeftOf="@id/input_add_exercise_type_name"
+        app:layout_constraintBottom_toTopOf="@id/label_add_exercise_type_unit"
+        android:text="@string/exercise_type_name"
+        style="@style/form_label"/>
 
     <EditText
-        android:id="@+id/et_exercise_type_name"
+        android:id="@+id/input_add_exercise_type_name"
         android:inputType="text"
-        android:importantForAutofill="no"
-        android:layout_width="0dip"
-        app:layout_constraintHorizontal_weight="2"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_bias="0.6"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/label_add_exercise_type_name"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@id/tv_exercise_type_name"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toTopOf="@id/input_add_exercise_type_unit"
+        android:importantForAutofill="no"
+        android:hint="@string/exercise_type_name_hint"
+        style="@style/form_input"/>
+
+    <TextView
+        android:id="@+id/label_add_exercise_type_unit"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_bias="0.4"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/label_add_exercise_type_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/input_add_exercise_type_unit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/exercise_type_unit"
+        style="@style/form_label"/>
+
+    <EditText
+        android:id="@+id/input_add_exercise_type_unit"
+        android:inputType="text"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_bias="0.6"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/input_add_exercise_type_name"
+        app:layout_constraintLeft_toRightOf="@id/label_add_exercise_type_unit"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:hint="@string/exercise_type_name_hint"
+        style="@style/form_input"
+        tools:ignore="Autofill" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
