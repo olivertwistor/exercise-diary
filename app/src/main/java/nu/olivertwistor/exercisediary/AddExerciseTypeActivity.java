@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-class AddExerciseTypeActivity extends AppCompatActivity
+public class AddExerciseTypeActivity extends AppCompatActivity
 {
     private static final String logtag = "AddExerciseTypeActivity";
 
