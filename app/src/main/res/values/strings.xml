@@ -4,8 +4,8 @@
     <string name="add_exercise_type">Add exercise type</string>
 
     <string name="exercise_type_name">Exercise type</string>
-    <string name="exercise_type_name_hint">e.g. "Situps"</string>
+    <string name="exercise_type_name_hint">e.g. \"Situps\"</string>
     <string name="exercise_type_unit">Unit</string>
-    <string name="exercise_type_unit_hint">e.g. "km" for running or "reps" for situps</string>
+    <string name="exercise_type_unit_hint">e.g. \"km\" for running or \"reps\" for situps</string>
     <string name="save_exercise_type">Save exercise type</string>
 </resources>
