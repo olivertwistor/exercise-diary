@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="nu.olivertwistor.exercisediary">
+    package="nu.olivertwistor.exercisediary"
+    android:installLocation="auto">
 
     <application
         android:allowBackup="true"
