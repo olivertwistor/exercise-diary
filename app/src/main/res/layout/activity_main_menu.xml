@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <Button
-        android:id="@+id/btn_add_exercise"
+        android:id="@+id/button_main_menu_add_exercise"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add_exercise"
@@ -13,15 +13,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/btn_add_exercise_type"/>
+        app:layout_constraintBottom_toTopOf="@id/button_main_menu_add_exercise_type"/>
 
     <Button
-        android:id="@+id/btn_add_exercise_type"
+        android:id="@+id/button_main_menu_add_exercise_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add_exercise_type"
         style="@style/main_menu_button"
-        app:layout_constraintTop_toBottomOf="@id/btn_add_exercise"
+        app:layout_constraintTop_toBottomOf="@id/button_main_menu_add_exercise"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>

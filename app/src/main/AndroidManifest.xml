@@ -13,7 +13,7 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-            android:name=".MainMenuActivity"
+            android:name=".controllers.MainMenuActivity"
             android:label="@string/app_name">
 
             <intent-filter>
@@ -23,12 +23,12 @@
         </activity>
         
         <activity
-            android:name=".AddExerciseTypeActivity"
+            android:name=".controllers.AddExerciseTypeActivity"
             android:label="@string/add_exercise_type">
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainMenuActivity"/>
+                android:value=".controllers.MainMenuActivity"/>
         </activity>
     </application>
 </manifest>
