@@ -152,7 +152,12 @@ public class ExerciseTypeViewModel extends AndroidViewModel
 
             if (exerciseTypes.length > 0)
             {
-                this.dao.insert(exerciseTypes);
+                long[] ids = this.dao.insert(exerciseTypes);
+
+                if (BuildConfig.DEBUG)
+                {
+                    Log.i(TAG, "Inserted new record with row id " + ids[0]);
+                }
             }
 
             return null;

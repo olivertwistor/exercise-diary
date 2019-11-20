@@ -58,6 +58,10 @@ public class AddExerciseTypeActivity extends AppCompatActivity
                 {
                     Log.i(TAG, "Inserted " + exerciseType);
                 }
+
+                // After insertion we need to empty the textboxes.
+                nameEditText.getText().clear();
+                unitEditText.getText().clear();
             }
         });
     }

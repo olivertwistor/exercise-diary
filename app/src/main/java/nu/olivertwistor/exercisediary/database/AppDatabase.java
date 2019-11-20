@@ -85,7 +85,7 @@ public abstract class AppDatabase extends RoomDatabase
      *
      * @since 0.1.0
      */
-    public static void destroyInstance()
+    private static void destroyInstance()
     {
         if (BuildConfig.DEBUG)
         {
@@ -93,5 +93,17 @@ public abstract class AppDatabase extends RoomDatabase
         }
         
         instance = null;
+    }
+
+    @Override
+    public void close()
+    {
+        if (BuildConfig.DEBUG)
+        {
+            Log.d(TAG, "Entering close()");
+        }
+
+        super.close();
+        destroyInstance();
     }
 }

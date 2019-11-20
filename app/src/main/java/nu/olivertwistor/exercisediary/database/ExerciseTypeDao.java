@@ -23,10 +23,12 @@ public interface ExerciseTypeDao
      *
      * @param exerciseType the object(s) to insert into the database
      *
+     * @return Row ID(s) of the inserted record(s).
+     *
      * @since 0.1.0
      */
     @Insert
-    void insert(ExerciseType... exerciseType);
+    long[] insert(ExerciseType... exerciseType);
 
     /**
      * Gets all exercise types from the database.
@@ -44,17 +46,23 @@ public interface ExerciseTypeDao
      *
      * @param exerciseType the object to update in the database
      *
+     * @return Number of records that were affected (should be 1 for success).
+     *
      * @since 0.1.0
      */
     @Update
-    void update(ExerciseType exerciseType);
+    int update(ExerciseType exerciseType);
 
     /**
      * Deletes the record in the database corresponding to the given exercise
      * type.
      *
      * @param exerciseType the object to delete from the database
+     *
+     * @return Number of records that were affected (should be 1 for success).
+     *
+     * @since 0.1.0
      */
     @Delete
-    void delete(ExerciseType exerciseType);
+    int delete(ExerciseType exerciseType);
 }
