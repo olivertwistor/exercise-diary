@@ -1,59 +1,46 @@
 # Exercise Diary
-This application helps you to journal your exercise and gather statistics about 
-it. You can use this application for any kind of exercises; you will add your 
-own exercises.
 
 ## Table of contents
-* [Who is this for?](#who-is-this-for)
-* [Prerequisites](#prerequisites)
-* [Installation instructions](#installation-instructions)
-* [Usage](#usage)
-* [Licensing](#licensing)
-* [How to contribute](#how-to-contribute)
-* [Versioning](#versioning)
+* [Background](#background)
+* [Purpose](#purpose)
+* [Goal](#goal)
+* [Stakeholders](#stakeholders)
 
-## Who is this for?
-If you want to keep track of your exercise, and love statistics, this 
-application might be something for you.
+## Background
+There are plenty of exercise applications out there. So why make another? I 
+have a disability and try to follow my physical therapy regimen. Since I don't 
+like to do my exercise on certain days, it's hard to keep track of how much 
+exercise I've done and still have left. So far I have been using an Excel 
+spreadsheet and it works fine. However, I would like to be able to record my 
+exercise on my smartphone instead of going to my computer. Editing Excel files 
+on smartphones works, but it can be really finnicky.
 
-## Prerequisites
-To run this application you will need the following:
+I would want next month's exercise to be based on the exercise I have done in 
+the last couple of months, in order to properly challenge me without feeling 
+overwhelmed or feel that the challenge is too easy. This is also possible to do 
+in my Excel spreadsheet, but it's a pain to update.
 
-* A device running Android:
-    * Android 4.0.3 (Ice Cream Sandwich) or newer
-    
-To build this application yourself you will need the following:
+Why don't I use another smartphone app instead of an Excel spreadsheet? Most 
+exercise apps I have tried is cloud based services, so they require people to 
+create a user account, many of them have quite many features such as GPS 
+support. I don't need that and I don't want to have to log in to a service to 
+record my exercise. I want a simple to use, off-line app. So far I haven't 
+found one I'm comfortable with using.
 
-* [Android SDK 15][6]
-* SDK Tools r14 or newer
-* [JDK 6 or newer][4]
+## Purpose
+The purpose of Exercise Diary is to provide a smartphone application that lets 
+you track and follow up on your exercise and get personalised recommendations 
+about future exercises based on your exercise history.
 
-## Installation instructions
-More info is coming once the first release is out.
+## Goal
+The goal of Exercise Diary is to make an Android app that:
 
-## Usage
-More info is coming once the first release is out.
+* provides the ability to enter details about your exercise
+* provides the ability to see statistics of your exercise history and to export 
+it to various file types (such as CSV)
+* can recommend an exercise schedule for you based on previous exercise
 
-## Licensing
-This application is licensed under the [MIT License][2]. For detailed license 
-terms, please read [LICENSE][8].
-
-## How to contribute
-Thank you for wanting to contribute to this project. Open source is all about 
-community. Go and read the document [CONTRIBUTING.md][9] for more 
-information on with what you can contribute and how to go about it.
-
-## Versioning
-This project uses [Semantic Versioning 2.0.0][3] for version numbering. To see 
-what's changed between versions, please read [CHANGELOG.md][10]. That file also
- has links to the download section of each release.
-
-
-[1]: https://httpd.apache.org/
-[2]: https://opensource.org/licenses/MIT
-[3]: https://semver.org/
-[4]: https://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html
-[6]: https://developer.android.com/studio/releases/platforms#4.0.3
-[8]: LICENSE
-[9]: CONTRIBUTING.md
-[10]: CHANGELOG.md
+## Stakeholders
+The primary stakeholders of Exercise Diary would be people who wants an easy 
+way to record their exercise on their smartphones, without the need of all 
+bells and whistles of other apps. 
