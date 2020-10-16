@@ -1,46 +1,38 @@
 # Exercise Diary
+This is a mobile app for Android that lets you track your exercise and gives
+you future targets based on how much exercise you have done. The whole app
+works offline, so there is no need to create an account somewhere and no
+password to forget. ;)
 
-## Table of contents
-* [Background](#background)
-* [Purpose](#purpose)
-* [Goal](#goal)
-* [Stakeholders](#stakeholders)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Licensing](#licensing)
 
-## Background
-There are plenty of exercise applications out there. So why make another? I 
-have a disability and try to follow my physical therapy regimen. Since I don't 
-like to do my exercise on certain days, it's hard to keep track of how much 
-exercise I've done and still have left. So far I have been using an Excel 
-spreadsheet and it works fine. However, I would like to be able to record my 
-exercise on my smartphone instead of going to my computer. Editing Excel files 
-on smartphones works, but it can be really finnicky.
+## Installation
+*NOTE: There is no release APK for this app yet.*
 
-I would want next month's exercise to be based on the exercise I have done in 
-the last couple of months, in order to properly challenge me without feeling 
-overwhelmed or feel that the challenge is too easy. This is also possible to do 
-in my Excel spreadsheet, but it's a pain to update.
+First, make sure your Android device meets the following prerequisites:
+* Android 4.0.3 (Ice Cream Sandwich)
 
-Why don't I use another smartphone app instead of an Excel spreadsheet? Most 
-exercise apps I have tried is cloud based services, so they require people to 
-create a user account, many of them have quite many features such as GPS 
-support. I don't need that and I don't want to have to log in to a service to 
-record my exercise. I want a simple to use, off-line app. So far I haven't 
-found one I'm comfortable with using.
+This app is currently not on Google Play, so the only way to get it is through
+Github. Follow these steps to install the app on your phone:
+1. [Allow installations from unknown sources.][1]
+1. Go to https://github.com/olivertwistor/exercise-diary/releases and click on
+the version you want (the topmost is the latest).
+1. Inside the version page, click the APK file to download it.
+1. If you're on a computer, you have to [transfer the APK file to your
+phone][2].
+1. Accept any prompts on your phone that asks you whether you want to install
+this app.
+1. If you want, you can go back and [forbid installations from unknown
+sources][1] for added security.
 
-## Purpose
-The purpose of Exercise Diary is to provide a smartphone application that lets 
-you track and follow up on your exercise and get personalised recommendations 
-about future exercises based on your exercise history.
+## Usage
+*NOTE: There is no release APK for this app yet.*
 
-## Goal
-The goal of Exercise Diary is to make an Android app that:
+## Licensing
+This app is under a MIT License. For full license terms, please read [LICENSE].
 
-* provides the ability to enter details about your exercise
-* provides the ability to see statistics of your exercise history and to export 
-it to various file types (such as CSV)
-* can recommend an exercise schedule for you based on previous exercise
 
-## Stakeholders
-The primary stakeholders of Exercise Diary would be people who wants an easy 
-way to record their exercise on their smartphones, without the need of all 
-bells and whistles of other apps. 
+[1]: https://www.verizon.com/support/knowledge-base-222186/
+[2]: https://stackoverflow.com/a/9718239/2267803
