@@ -31,8 +31,10 @@ sources][1] for added security.
 *NOTE: There is no release APK for this app yet.*
 
 ## Licensing
-This app is under a MIT License. For full license terms, please read [LICENSE].
+This app is under a MIT License. For full license terms, please read
+[LICENSE][3].
 
 
 [1]: https://www.verizon.com/support/knowledge-base-222186/
 [2]: https://stackoverflow.com/a/9718239/2267803
+[3]: LICENSE
